@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Willy Kostet](https://up.htmlacademy.ru/adaptive/20/user/1359281).
-* Наставник: `Неизвестно`.
+- Студент: [Willy Kostet](https://up.htmlacademy.ru/adaptive/20/user/1359281).
+- Наставник: `Александр Панасюк`.
 
 ---
 
