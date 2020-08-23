@@ -1,14 +1,30 @@
 .promo {
+  display: flex;
+  flex-direction: column;
   background-image: url(/source/img/index-background-mobile@1x.jpg);
   color: @basicWhite;
+  background-size: cover;
   margin-bottom: 22px;
+  background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
 }
 .promo__heading {
   font-family: "Oswald Medium", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
+  text-align: center;
+  max-width: 249px;
+  margin: 25px auto;
+  @media (min-width: @tablet-width) {
+    color: @basicBlack;
+  }
 }
 .promo__slogan {
   font-family: "Oswald Regular", "Arial", sans-serif;
   line-height: 14px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 29px;
 }
