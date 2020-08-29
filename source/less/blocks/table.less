@@ -1,0 +1,31 @@
+.table {
+  font-size: 12px;
+  line-height: 16px;
+  border-collapse: collapse;
+  border: none;
+}
+
+.table__value {
+  text-align: right;
+  padding: 0;
+}
+
+.table__name {
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .table {
+    font-size: 16px;
+  }
+
+  .table__row {
+    border-bottom: 1px solid @specialGrey;
+  }
+
+  .table__value,
+  .table__name {
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+}
