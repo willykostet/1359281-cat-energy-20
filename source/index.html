@@ -10,6 +10,11 @@
     <header class="page-header">
       <div class="page-header__wrapper container">
       <a href="#" class="page-header__logo" title='Главная'>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="../img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
+          <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи.">
+        </picture>
       </a>
       <nav class="main-nav">
         <button
@@ -155,5 +160,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
