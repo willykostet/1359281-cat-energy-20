@@ -1,3 +1,32 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__link:hover .copyright__image {
+  fill: #e6e6e6;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
 .copyright__text {
   font-size: 16px;
+  line-height: 16px;
+  pointer-events: none;
+}
+
+.copyright__image {
+  width: 27px;
+  height: 34px;
+  fill: #656565;
+  pointer-events: none;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__text {
+    margin-right: 24px;
+  }
 }
