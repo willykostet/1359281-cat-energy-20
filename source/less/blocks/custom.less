@@ -1,0 +1,109 @@
+.custom__label {
+  font-size: 16px;
+  line-height: 18px;
+  color: @specialDarkGrey2;
+  font-weight: 400;
+  font-family: @Oswald;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 46px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.custom__label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  border: 1px solid @specialGrey;
+  background-color: @basicWhite;
+}
+
+.custom__input[type="radio"] ~ .custom__label::before {
+  border-radius: 50%;
+}
+
+.custom__input[type="radio"]:checked ~ .custom__label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  border-radius: 50%;
+  background-color: @basicGreen;
+}
+
+.custom__input[type="checkbox"]:checked ~ .custom__label::after {
+  content: "";
+  width: 21px;
+  height: 16px;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+.custom__input:focus ~ .custom__label::before {
+  border: 1px solid #bababa;
+}
+
+.custom__input:active:enabled ~ .custom__label {
+  opacity: 0.3;
+}
+
+.custom__input:active:enabled ~ .custom__label::before {
+  border-color: #bababa;
+}
+
+.custom__label:hover::before {
+  border-color: #bababa;
+}
+
+.custom__input:disabled ~ .custom__label::before {
+  background-color: @basicGrey;
+  border-color: @specialGrey;
+}
+
+.custom__input:disabled ~ .custom__label .custom__text,
+.custom__input:disabled ~ .custom__label::after {
+  opacity: 0.3;
+}
+
+.custom__text {
+  display: block;
+  pointer-events: none;
+}
+
+@media (min-width: @tablet-width) {
+  .custom__label {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 9px;
+    padding-bottom: 13px;
+    padding-left: 60px;
+  }
+
+  .custom__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .custom__input[type="radio"]:checked ~ .custom__label::after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+    top: 11px;
+  }
+
+  .custom__input[type="checkbox"]:checked ~ .custom__label::after {
+    top: 12px;
+    left: 10px;
+  }
+}
