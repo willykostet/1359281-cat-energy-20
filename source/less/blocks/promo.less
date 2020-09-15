@@ -1,14 +1,170 @@
 .promo {
-  background-image: url(/source/img/index-background-mobile@1x.jpg);
-  color: @basicWhite;
-  margin-bottom: 22px;
+  position: relative;
 }
+
+.promo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 305px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: @basicGreen;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.promo__wrapper {
+  padding-top: 7px;
+  padding-bottom: 22px;
+  position: relative;
+}
+
 .promo__heading {
-  font-family: "Oswald Medium", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
+  color: @basicWhite;
+  font-weight: 400;
+  font-family: @Oswald;
+  text-align: center;
+  margin: 20px 0;
 }
+
 .promo__slogan {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 14px;
   line-height: 14px;
+  color: @basicWhite;
+  font-weight: 400;
+  font-family: @Oswald;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 25px 0 28px;
+}
+
+.promo__image {
+  display: block;
+  width: 280px;
+  height: 271px;
+  margin-bottom: 3px;
+}
+
+.promo__link {
+  font-size: 14px;
+  line-height: 18px;
+  color: @basicWhite;
+  font-weight: 400;
+  font-family: @Oswald;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  min-height: 20px;
+  padding: 10px;
+  background-color: @basicGreen;
+}
+
+.promo__link:hover {
+  background-color: @basicGreen2;
+}
+
+.promo__link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .promo::before {
+    display: none;
+  }
+
+  .promo__wrapper {
+    padding-bottom: 0;
+  }
+
+  .promo__heading {
+    font-size: 60px;
+    line-height: 60px;
+    color: @almostBlack;
+    text-align: left;
+    padding: 0 88px;
+    margin: 5px 0;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: @almostBlack;
+    text-align: left;
+    padding: 0 88px;
+    margin: 41px 0 20px;
+  }
+  .promo__image {
+    width: 709px;
+    height: 609px;
+    margin-bottom: 0;
+  }
+
+  .promo__link {
+    font-size: 20px;
+    line-height: 20px;
+    width: 225px;
+    min-height: 27px;
+    position: absolute;
+    left: 110px;
+    top: 241px;
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    min-height: 639px;
+  }
+
+  .promo::before {
+    display: block;
+    width: auto;
+    height: 696px;
+    top: -137px;
+    left: calc(50% - 1px);
+    right: 0;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: 0 0;
+  }
+
+  .promo__wrapper.container {
+    min-height: 632px;
+    padding-left: 80px;
+    box-sizing: border-box;
+  }
+
+  .promo__heading,
+  .promo__slogan {
+    width: 450px;
+    padding: 0;
+  }
+
+  .promo__heading {
+    margin-top: 78px;
+  }
+
+  .promo__image {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    top: 5px;
+    left: 450px;
+  }
+
+  .promo__link {
+    position: static;
+    margin-top: 53px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .promo::before {
+    background-position: center;
+  }
 }
