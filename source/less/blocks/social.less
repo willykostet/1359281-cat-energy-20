@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-right: 42px;
+  padding: 0;
 }
 
 .social__item:not(:last-child) {
@@ -47,6 +47,9 @@
 }
 
 @media (min-width: @tablet-width) {
+  .social {
+    padding-right: 16px;
+  }
   .social__link {
     width: 30px;
     height: 30px;
